@@ -10,7 +10,7 @@ class MyError extends ExtendableError {
 }
 
 ```
-
+`extendable-error-class` has no dependencies.
 
 
 ### Why
@@ -44,5 +44,7 @@ const ExtendableError = class extends Error {
     }
 };
 ```
+
+The code is already compiled with `babel` and `babel-plugin-transform-builtin-extend`. Therefore one is able to use this workaround without adding any dependency.
 
 See http://stackoverflow.com/questions/31089801/extending-error-in-javascript-with-es6-syntax
