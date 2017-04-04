@@ -6,6 +6,11 @@ const ExtendableError = require('extendable-error-class');
 class MyError extends ExtendableError {
     constructor(m) {
         super(m);
+        
+        // Optional - ExtendableError sets `name` to your class's name itself,
+        // but minification, etc. can change that, so you may want to do it
+        // explicitly.
+        this.name = 'MyError';
     }
 }
 
