@@ -6,11 +6,12 @@
   "main": "dist/index.es5.js",
   "babel": {
     "presets": [
-      "es2015"
+      "env"
     ],
     "plugins": [
       [
-        "babel-plugin-transform-builtin-extend",
+        "transform-runtime",
+        "transform-builtin-extend",
         {
           "globals": [
             "Error"
@@ -22,11 +23,14 @@
   "scripts": {
     "build": "./node_modules/.bin/babel index.es2015.js > dist/index.es5.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "babel-plugin-transform-builtin-extend": "^1.1.0",
-    "babel-preset-es2015": "^6.9.0"
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.4.0"
   },
   "license": "CCO"
 }
