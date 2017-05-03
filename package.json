@@ -28,5 +28,5 @@
     "babel-plugin-transform-builtin-extend": "^1.1.0",
     "babel-preset-es2015": "^6.9.0"
   },
-  "license": "CCO"
+  "license": "CC0-1.0"
 }
