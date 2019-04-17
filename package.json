@@ -1,6 +1,6 @@
 {
   "name": "extendable-error-class",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Extend the Error Class with ES2015/ES5/Babel, i.e. fix for `class MyError extends Error{}`",
   "repository": "github:brillout/extendable-error-class",
   "main": "dist/index.es5.js",
