@@ -1,43 +1,30 @@
 "use strict";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
 
-function _extendableBuiltin(cls) {
-    function ExtendableBuiltin() {
-        var instance = Reflect.construct(cls, Array.from(arguments));
-        Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
-        return instance;
-    }
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-    ExtendableBuiltin.prototype = Object.create(cls.prototype, {
-        constructor: {
-            value: cls,
-            enumerable: false,
-            writable: true,
-            configurable: true
-        }
-    });
+var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");
 
-    if (Object.setPrototypeOf) {
-        Object.setPrototypeOf(ExtendableBuiltin, cls);
-    } else {
-        ExtendableBuiltin.__proto__ = cls;
-    }
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-    return ExtendableBuiltin;
-}
+var _inherits2 = require("babel-runtime/helpers/inherits");
 
-var ExtendableError = function (_extendableBuiltin2) {
-    _inherits(ExtendableError, _extendableBuiltin2);
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ExtendableError = function (_Error) {
+    (0, _inherits3.default)(ExtendableError, _Error);
 
     function ExtendableError(message) {
-        _classCallCheck(this, ExtendableError);
+        (0, _classCallCheck3.default)(this, ExtendableError);
 
-        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ExtendableError).call(this, message));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (ExtendableError.__proto__ || (0, _getPrototypeOf2.default)(ExtendableError)).call(this, message));
 
         _this.name = _this.constructor.name;
         _this.message = message;
@@ -50,7 +37,7 @@ var ExtendableError = function (_extendableBuiltin2) {
     }
 
     return ExtendableError;
-}(_extendableBuiltin(Error));
+}(Error);
 
 module.exports = ExtendableError;
 
